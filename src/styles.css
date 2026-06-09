@@ -62,6 +62,10 @@
 }
 
 @theme {
+  --color-light-accent: var(--light-accent);
+  --font-sans: var(--font-sans);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
   --animate-fade-up: fade-up 0.6s ease-out both;
 }
 
