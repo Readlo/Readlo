@@ -77,19 +77,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Readlo — India's Peer-to-Peer Book Lending Community" },
+      {
+        name: "description",
+        content:
+          "Borrow books from readers near you and lend the ones you've finished. Join Readlo, India's first peer-to-peer book lending community. Launching in Jammu first.",
+      },
+      { name: "author", content: "Readlo" },
+      { property: "og:title", content: "Readlo — Read more. Spend less." },
+      {
+        property: "og:description",
+        content:
+          "India's first peer-to-peer physical book lending marketplace. Join the waitlist and help shape the launch.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap",
       },
     ],
   }),
