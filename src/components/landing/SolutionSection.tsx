@@ -1,4 +1,4 @@
-import { BookDown, BadgeIndianRupee, MapPinned, type LucideIcon } from "lucide-react";
+import { BookDown, BadgeIndianRupee, type LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
@@ -13,21 +13,15 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: BookDown,
-    eyebrow: "01",
+    eyebrow: "FOR BORROWERS",
     title: "Borrow Books",
     body: "Access books without paying full retail prices. Discover more titles while keeping reading affordable.",
   },
   {
     icon: BadgeIndianRupee,
-    eyebrow: "02",
+    eyebrow: "FOR LENDERS",
     title: "Lend & Earn",
     body: "List books you've already read. Earn back part of what you spent whenever someone borrows them.",
-  },
-  {
-    icon: MapPinned,
-    eyebrow: "03",
-    title: "Stay Local",
-    body: "Everything happens within your city. Meet fellow readers and keep the experience community-driven.",
   },
 ];
 
@@ -40,7 +34,7 @@ export function SolutionSection() {
             The Solution
           </span>
           <h2 className="mt-4 text-3xl font-bold leading-[1.15] tracking-tight text-foreground sm:text-4xl">
-            Give books a second life. And earn from the first.
+            Give books a second life and get a chance to earn from the first.
           </h2>
         </Reveal>
       </div>
