@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BookOpen, Menu, X } from "lucide-react";
+import { useRouter } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,6 +14,7 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -22,7 +24,11 @@ export function Navbar() {
   }, []);
 
   const go = (id: string) => {
-    scrollToId(id);
+    if (router.state.location.pathname !== "/") {
+      router.navigate({ to: "/", hash: id });
+    } else {
+      scrollToId(id);
+    }
     setMobileOpen(false);
   };
 
