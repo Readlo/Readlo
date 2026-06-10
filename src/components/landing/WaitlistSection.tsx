@@ -13,10 +13,14 @@ function RadioGroup({
   name,
   options,
   required,
+  value,
+  onChange,
 }: {
   name: string;
   options: string[];
   required?: boolean;
+  value?: string;
+  onChange?: (value: string) => void;
 }) {
   return (
     <div className="flex flex-wrap gap-2.5">
@@ -30,6 +34,8 @@ function RadioGroup({
             name={name}
             value={opt}
             required={required}
+            checked={value !== undefined ? value === opt : undefined}
+            onChange={onChange ? () => onChange(opt) : undefined}
             className="peer sr-only"
           />
           <span className="rounded-full border border-input bg-background px-4 py-2 text-sm font-medium text-muted-foreground transition-all peer-checked:border-primary peer-checked:bg-light-accent peer-checked:text-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primary/30 hover:border-primary/40">
