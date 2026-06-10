@@ -137,26 +137,44 @@ export function WaitlistSection() {
 
                 <fieldset>
                   <legend className={labelClass}>Interested In</legend>
-                  <RadioGroup name="interest" options={["Borrowing", "Lending", "Both"]} required />
-                </fieldset>
-
-                <div>
-                  <label htmlFor="desiredBook" className={labelClass}>
-                    Book I'd Most Like To Borrow
-                  </label>
-                  <input
-                    id="desiredBook"
-                    name="desiredBook"
-                    type="text"
-                    placeholder="Title or author"
-                    className={fieldClass}
+                  <RadioGroup
+                    name="interest"
+                    options={["Borrowing", "Lending", "Both"]}
+                    required
+                    value={interest}
+                    onChange={setInterest}
                   />
-                </div>
-
-                <fieldset>
-                  <legend className={labelClass}>Do You Own Books You'd Lend?</legend>
-                  <RadioGroup name="ownsBooks" options={["Yes", "No", "Maybe"]} />
                 </fieldset>
+
+                {(interest === "Borrowing" || interest === "Both") && (
+                  <div>
+                    <label htmlFor="bookToBorrow" className={labelClass}>
+                      What book would you most like to borrow?
+                    </label>
+                    <input
+                      id="bookToBorrow"
+                      name="book_to_borrow"
+                      type="text"
+                      placeholder="e.g. Atomic Habits, The Alchemist..."
+                      className={fieldClass}
+                    />
+                  </div>
+                )}
+
+                {(interest === "Lending" || interest === "Both") && (
+                  <div>
+                    <label htmlFor="bookToLend" className={labelClass}>
+                      What book would you most like to lend?
+                    </label>
+                    <input
+                      id="bookToLend"
+                      name="book_to_lend"
+                      type="text"
+                      placeholder="e.g. The book sitting on your shelf right now..."
+                      className={fieldClass}
+                    />
+                  </div>
+                )}
 
                 <div>
                   <label htmlFor="comments" className={labelClass}>
