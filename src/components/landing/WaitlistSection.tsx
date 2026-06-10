@@ -49,6 +49,7 @@ function RadioGroup({
 
 export function WaitlistSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [interest, setInterest] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
