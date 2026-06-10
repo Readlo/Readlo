@@ -51,11 +51,11 @@ export function SolutionSection() {
                 )}
               >
                 <div className="flex w-full shrink-0 justify-center lg:w-2/5">
-                  <FeatureGlyph icon={feature.icon} index={feature.eyebrow} />
+                  <FeatureGlyph icon={feature.icon} index={String(i + 1).padStart(2, "0")} />
                 </div>
                 <div className="w-full lg:w-3/5">
                   <span className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-                    Feature {feature.eyebrow}
+                    {feature.eyebrow}
                   </span>
                   <h3 className="mt-3 text-2xl font-bold text-foreground sm:text-3xl">
                     {feature.title}
