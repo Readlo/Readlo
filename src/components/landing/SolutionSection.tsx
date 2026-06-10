@@ -1,4 +1,4 @@
-import { BookDown, BadgeIndianRupee, MapPinned, type LucideIcon } from "lucide-react";
+import { BookDown, BadgeIndianRupee, type LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
@@ -13,21 +13,15 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: BookDown,
-    eyebrow: "01",
+    eyebrow: "FOR BORROWERS",
     title: "Borrow Books",
     body: "Access books without paying full retail prices. Discover more titles while keeping reading affordable.",
   },
   {
     icon: BadgeIndianRupee,
-    eyebrow: "02",
+    eyebrow: "FOR LENDERS",
     title: "Lend & Earn",
     body: "List books you've already read. Earn back part of what you spent whenever someone borrows them.",
-  },
-  {
-    icon: MapPinned,
-    eyebrow: "03",
-    title: "Stay Local",
-    body: "Everything happens within your city. Meet fellow readers and keep the experience community-driven.",
   },
 ];
 
@@ -40,7 +34,7 @@ export function SolutionSection() {
             The Solution
           </span>
           <h2 className="mt-4 text-3xl font-bold leading-[1.15] tracking-tight text-foreground sm:text-4xl">
-            Give books a second life. And earn from the first.
+            Give books a second life and get a chance to earn from the first.
           </h2>
         </Reveal>
       </div>
@@ -57,11 +51,11 @@ export function SolutionSection() {
                 )}
               >
                 <div className="flex w-full shrink-0 justify-center lg:w-2/5">
-                  <FeatureGlyph icon={feature.icon} index={feature.eyebrow} />
+                  <FeatureGlyph icon={feature.icon} index={String(i + 1).padStart(2, "0")} />
                 </div>
                 <div className="w-full lg:w-3/5">
                   <span className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-                    Feature {feature.eyebrow}
+                    {feature.eyebrow}
                   </span>
                   <h3 className="mt-3 text-2xl font-bold text-foreground sm:text-3xl">
                     {feature.title}

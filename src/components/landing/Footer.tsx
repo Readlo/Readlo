@@ -1,4 +1,5 @@
 import { BookOpen } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
@@ -7,7 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr]">
           {/* Column 1 */}
           <div>
             <div className="flex items-center gap-2.5">
@@ -63,41 +64,22 @@ export function Footer() {
           </div>
 
           {/* Column 3 */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-                Company
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-                Legal
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              Company
+            </h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li>
+                <Link to="/about" className="text-foreground transition-colors hover:text-primary">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-foreground transition-colors hover:text-primary">
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

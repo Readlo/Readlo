@@ -24,8 +24,8 @@ const faqs = [
     a: "Borrowing will cost significantly less than purchasing a new copy. Exact pricing will be finalized after community feedback and testing.",
   },
   {
-    q: "Which cities will launch first?",
-    a: "Jammu first. Future cities will be prioritized based on demand.",
+    q: "Which cities do you plan to launch in first?",
+    a: "Jammu first. Expansion to other cities will be prioritized based on the response from the community.",
   },
 ];
 
@@ -39,7 +39,7 @@ export function FaqSection() {
             Questions, answered honestly.
           </h2>
           <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
-            Have something else on your mind? Tell us through the waitlist form.
+            Have something else on your mind? Tell us through the waitlist form, or reach out through the contact info on our About page.
           </p>
         </Reveal>
 

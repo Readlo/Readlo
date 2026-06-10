@@ -42,7 +42,7 @@ export function Hero() {
           </div>
 
           <p className="mt-5 text-sm text-muted-foreground">
-            Join the founding community of readers in Jammu.
+            Join a community of bookworms who read more and spend less.
           </p>
         </div>
 

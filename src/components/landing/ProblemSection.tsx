@@ -22,7 +22,7 @@ const problems: Problem[] = [
   {
     icon: UserX,
     title: "Budget Readers Miss Out",
-    body: "People skip books they genuinely want because purchasing every title becomes expensive.",
+    body: "People skip books they want because purchasing new titles every time becomes expensive.",
   },
   {
     icon: Unplug,
@@ -40,7 +40,7 @@ export function ProblemSection() {
             The Problem
           </span>
           <h2 className="mt-4 text-3xl font-bold leading-[1.15] tracking-tight text-foreground sm:text-4xl">
-            Buying every book gets expensive. Then it just collects dust.
+            Buying a new book every time gets expensive. Then it just collects dust.
           </h2>
         </Reveal>
 

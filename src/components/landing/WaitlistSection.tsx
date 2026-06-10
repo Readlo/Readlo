@@ -13,10 +13,14 @@ function RadioGroup({
   name,
   options,
   required,
+  value,
+  onChange,
 }: {
   name: string;
   options: string[];
   required?: boolean;
+  value?: string;
+  onChange?: (value: string) => void;
 }) {
   return (
     <div className="flex flex-wrap gap-2.5">
@@ -30,6 +34,8 @@ function RadioGroup({
             name={name}
             value={opt}
             required={required}
+            checked={value !== undefined ? value === opt : undefined}
+            onChange={onChange ? () => onChange(opt) : undefined}
             className="peer sr-only"
           />
           <span className="rounded-full border border-input bg-background px-4 py-2 text-sm font-medium text-muted-foreground transition-all peer-checked:border-primary peer-checked:bg-light-accent peer-checked:text-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primary/30 hover:border-primary/40">
@@ -43,6 +49,7 @@ function RadioGroup({
 
 export function WaitlistSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [interest, setInterest] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -130,26 +137,44 @@ export function WaitlistSection() {
 
                 <fieldset>
                   <legend className={labelClass}>Interested In</legend>
-                  <RadioGroup name="interest" options={["Borrowing", "Lending", "Both"]} required />
-                </fieldset>
-
-                <div>
-                  <label htmlFor="desiredBook" className={labelClass}>
-                    Book I'd Most Like To Borrow
-                  </label>
-                  <input
-                    id="desiredBook"
-                    name="desiredBook"
-                    type="text"
-                    placeholder="Title or author"
-                    className={fieldClass}
+                  <RadioGroup
+                    name="interest"
+                    options={["Borrowing", "Lending", "Both"]}
+                    required
+                    value={interest}
+                    onChange={setInterest}
                   />
-                </div>
-
-                <fieldset>
-                  <legend className={labelClass}>Do You Own Books You'd Lend?</legend>
-                  <RadioGroup name="ownsBooks" options={["Yes", "No", "Maybe"]} />
                 </fieldset>
+
+                {(interest === "Borrowing" || interest === "Both") && (
+                  <div>
+                    <label htmlFor="bookToBorrow" className={labelClass}>
+                      What book would you most like to borrow?
+                    </label>
+                    <input
+                      id="bookToBorrow"
+                      name="book_to_borrow"
+                      type="text"
+                      placeholder="e.g. Atomic Habits, The Alchemist..."
+                      className={fieldClass}
+                    />
+                  </div>
+                )}
+
+                {(interest === "Lending" || interest === "Both") && (
+                  <div>
+                    <label htmlFor="bookToLend" className={labelClass}>
+                      What book would you most like to lend?
+                    </label>
+                    <input
+                      id="bookToLend"
+                      name="book_to_lend"
+                      type="text"
+                      placeholder="e.g. The book sitting on your shelf right now..."
+                      className={fieldClass}
+                    />
+                  </div>
+                )}
 
                 <div>
                   <label htmlFor="comments" className={labelClass}>

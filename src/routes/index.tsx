@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
@@ -30,6 +31,18 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        requestAnimationFrame(() =>
+          el.scrollIntoView({ behavior: "smooth", block: "start" }),
+        );
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
