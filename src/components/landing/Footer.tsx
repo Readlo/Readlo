@@ -1,4 +1,5 @@
 import { BookOpen } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
@@ -63,41 +64,22 @@ export function Footer() {
           </div>
 
           {/* Column 3 */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-                Company
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-                Legal
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-foreground transition-colors hover:text-primary">
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              Company
+            </h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li>
+                <Link to="/about" className="text-foreground transition-colors hover:text-primary">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-foreground transition-colors hover:text-primary">
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
