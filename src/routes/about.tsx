@@ -48,19 +48,20 @@ function AboutPage() {
               </h1>
               <div className="mt-8 space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <p>
-                  Most of us have a stack of books we loved reading once and haven't touched since.
-                  Not because we stopped caring about them — just because that's how it goes. You read
-                  it, you shelve it, you move on.
+                  There is a very specific feeling you get after finishing a book you loved. You close
+                  it, set it down, and it just sits there. On the shelf, on the nightstand, on the
+                  floor next to your bed. Weeks pass. Then months. The book does not move. You do not
+                  reread it. It just exists.
                 </p>
                 <p>
-                  Readlo is our attempt to fix that quiet waste. A place where finished books find new
-                  readers, and where the cost of curiosity doesn't have to be a barrier. We're not a
-                  library. We're not a store. We're the infrastructure for readers to help each other.
+                  Meanwhile, somewhere across the city, someone wants to read that exact book but
+                  cannot justify spending full price on something they will finish in a week. So they
+                  skip it. And your copy keeps collecting dust. That felt like a problem worth solving.
                 </p>
                 <p>
-                  We're starting small — one city, a handful of readers, zero funding. Just an idea we
-                  believe in and a community we're trying to build. If that sounds like something you'd
-                  want to be part of, you're exactly who this is for.
+                  Readlo is one person, one city, and one straightforward idea: books should move
+                  between readers, not sit on shelves. If this resonates with you, you are exactly the
+                  kind of person we are building this for.
                 </p>
               </div>
             </Reveal>
@@ -78,7 +79,7 @@ function AboutPage() {
                 We'd love to hear from you.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                We're a small team. We read every message.
+                Readlo is an early-stage project. Every message goes directly to the founder.
               </p>
 
               <div className="mt-8 rounded-2xl bg-secondary p-5 sm:p-7">
