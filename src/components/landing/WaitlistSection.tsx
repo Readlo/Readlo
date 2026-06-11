@@ -50,13 +50,58 @@ function RadioGroup({
 export function WaitlistSection() {
   const [submitted, setSubmitted] = useState(false);
   const [interest, setInterest] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Pre-launch MVP: no backend. Capture intent locally and show success.
-    setSubmitted(true);
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: window.scrollY, behavior: "smooth" });
+    setError("");
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const payload: Record<string, string> = {
+      fullName: (data.get("fullName") as string) ?? "",
+      email: (data.get("email") as string) ?? "",
+      city: (data.get("city") as string) ?? "",
+      interestedIn: (data.get("interest") as string) ?? "",
+      additionalComments: (data.get("comments") as string) ?? "",
+    };
+
+    if (interest === "Borrowing" || interest === "Both") {
+      payload.bookToBorrow = (data.get("book_to_borrow") as string) ?? "";
+    }
+    if (interest === "Lending" || interest === "Both") {
+      payload.bookToLend = (data.get("book_to_lend") as string) ?? "";
+    }
+
+    try {
+      const res = await fetch("https://formspree.io/f/xdavlybg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.status === 200) {
+        setSubmitted(true);
+        if (typeof window !== "undefined") {
+          window.scrollTo({ top: window.scrollY, behavior: "smooth" });
+        }
+      } else {
+        setError(
+          "Something went wrong. Please try again or email us at readlo.social@gmail.com",
+        );
+      }
+    } catch {
+      setError(
+        "Something went wrong. Please try again or email us at readlo.social@gmail.com",
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -189,10 +234,22 @@ export function WaitlistSection() {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="pillLg" className="w-full">
-                  Join Early Access
-                  <ArrowRight className="h-4 w-4" />
+                <Button
+                  type="submit"
+                  variant="hero"
+                  size="pillLg"
+                  className="w-full"
+                  disabled={loading}
+                >
+                  {loading ? "Submitting..." : "Join Early Access"}
+                  {!loading && <ArrowRight className="h-4 w-4" />}
                 </Button>
+
+                {error && (
+                  <p className="text-center text-sm font-medium text-destructive">
+                    {error}
+                  </p>
+                )}
 
                 <p className="text-center text-xs text-muted-foreground">
                   No spam. We'll only contact you regarding Readlo.
