@@ -1,0 +1,54 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Booki, the friendly book mascot for Readlo">
+  <defs>
+    <clipPath id="bookiBody">
+      <rect x="120" y="118" width="266" height="300" rx="40" />
+    </clipPath>
+  </defs>
+
+  <!-- Bookmark ribbon (arm/tail) tucked behind the top edge -->
+  <g>
+    <path d="M300 96 L348 96 L348 320 L324 294 L300 320 Z"
+          fill="#23B8AC" stroke="#0E1E1C" stroke-width="9"
+          stroke-linejoin="round" />
+    <rect x="312" y="120" width="10" height="150" rx="5" fill="#FFFFFF" fill-opacity="0.35" />
+  </g>
+
+  <!-- Page edges peeking on the right -->
+  <g>
+    <path d="M372 132 L398 150 L398 392 L372 410 Z"
+          fill="#FBF3E4" stroke="#0E1E1C" stroke-width="9" stroke-linejoin="round" />
+    <path d="M380 168 L394 178 M380 210 L394 220 M380 252 L394 262 M380 294 L394 304 M380 336 L394 346"
+          stroke="#E2C9A0" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Book body (front cover) -->
+  <g>
+    <rect x="120" y="118" width="266" height="300" rx="40"
+          fill="#E87C2E" stroke="#0E1E1C" stroke-width="11" />
+    <!-- Spine band on the left -->
+    <g clip-path="url(#bookiBody)">
+      <rect x="120" y="118" width="42" height="300" fill="#CC6517" />
+      <line x1="162" y1="118" x2="162" y2="418" stroke="#0E1E1C" stroke-width="9" />
+    </g>
+  </g>
+
+  <!-- Face: big expressive eyes -->
+  <g>
+    <!-- Left eye -->
+    <ellipse cx="222" cy="232" rx="46" ry="54" fill="#FFFFFF" stroke="#0E1E1C" stroke-width="10" />
+    <circle cx="230" cy="240" r="23" fill="#0E1E1C" />
+    <circle cx="222" cy="231" r="8" fill="#FFFFFF" />
+    <!-- Right eye -->
+    <ellipse cx="324" cy="232" rx="46" ry="54" fill="#FFFFFF" stroke="#0E1E1C" stroke-width="10" />
+    <circle cx="316" cy="240" r="23" fill="#0E1E1C" />
+    <circle cx="308" cy="231" r="8" fill="#FFFFFF" />
+  </g>
+
+  <!-- Rosy cheeks -->
+  <ellipse cx="186" cy="312" rx="16" ry="11" fill="#F6A65C" />
+  <ellipse cx="360" cy="312" rx="16" ry="11" fill="#F6A65C" />
+
+  <!-- Small simple smile -->
+  <path d="M244 318 Q273 350 302 318"
+        stroke="#0E1E1C" stroke-width="10" stroke-linecap="round" fill="none" />
+</svg>
