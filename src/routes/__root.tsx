@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/6ea6cd0c-5d36-4f0d-8ffb-cc114ee54970/booki-logo.png" },
+      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/e2acfc96-6b1f-438d-bb78-95dc3c915cb9/booki-logo.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
