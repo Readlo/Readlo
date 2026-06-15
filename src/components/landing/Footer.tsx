@@ -1,10 +1,20 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
 import bookiLogo from "@/assets/booki-logo.png.asset.json";
 
 export function Footer() {
+  const router = useRouter();
+
+  const go = (id: string) => {
+    if (router.state.location.pathname !== "/") {
+      router.navigate({ to: "/", hash: id });
+    } else {
+      scrollToId(id);
+    }
+  };
+
   return (
     <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
@@ -22,7 +32,7 @@ export function Footer() {
               variant="hero"
               size="pill"
               className="mt-5"
-              onClick={() => scrollToId("waitlist")}
+              onClick={() => go("waitlist")}
             >
               Join Waitlist
             </Button>
@@ -36,7 +46,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <button
-                  onClick={() => scrollToId("how-it-works")}
+                  onClick={() => go("how-it-works")}
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   How It Works
@@ -44,7 +54,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToId("faq")}
+                  onClick={() => go("faq")}
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   FAQ
@@ -52,7 +62,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToId("waitlist")}
+                  onClick={() => go("waitlist")}
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   Join Waitlist
