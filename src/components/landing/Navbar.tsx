@@ -5,7 +5,7 @@ import { useRouter } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { scrollToId } from "@/lib/scroll";
-import bookiLogo from "@/assets/booki-logo.png.asset.json";
+
 
 const navLinks = [
   { label: "How It Works", id: "how-it-works" },
@@ -49,7 +49,7 @@ export function Navbar() {
           aria-label="Readlo home"
         >
           <img
-            src={bookiLogo.url}
+            src="/booki.png"
             alt="Readlo logo"
             className="h-10 w-auto"
           />
