@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { BookOpen, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useRouter } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { scrollToId } from "@/lib/scroll";
+import bookiLogo from "@/assets/booki-logo.png.asset.json";
 
 const navLinks = [
   { label: "How It Works", id: "how-it-works" },
@@ -47,9 +48,11 @@ export function Navbar() {
           className="flex items-center gap-2.5"
           aria-label="Readlo home"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <BookOpen className="h-5 w-5" />
-          </span>
+          <img
+            src={bookiLogo.url}
+            alt="Readlo logo"
+            className="h-10 w-auto"
+          />
           <span className="text-lg font-extrabold tracking-tight text-foreground">Readlo</span>
         </button>
 
