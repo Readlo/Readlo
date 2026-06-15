@@ -32,7 +32,7 @@ export function Footer() {
               variant="hero"
               size="pill"
               className="mt-5"
-              onClick={() => scrollToId("waitlist")}
+              onClick={() => go("waitlist")}
             >
               Join Waitlist
             </Button>
@@ -46,7 +46,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <button
-                  onClick={() => scrollToId("how-it-works")}
+                  onClick={() => go("how-it-works")}
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   How It Works
@@ -54,7 +54,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToId("faq")}
+                  onClick={() => go("faq")}
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   FAQ
@@ -62,7 +62,7 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToId("waitlist")}
+                  onClick={() => go("waitlist")}
                   className="text-foreground transition-colors hover:text-primary"
                 >
                   Join Waitlist
