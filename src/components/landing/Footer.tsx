@@ -1,8 +1,8 @@
-import { BookOpen } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
+import bookiLogo from "@/assets/booki-logo.png.asset.json";
 
 export function Footer() {
   return (
@@ -12,9 +12,7 @@ export function Footer() {
           {/* Column 1 */}
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <BookOpen className="h-5 w-5" />
-              </span>
+              <img src={bookiLogo.url} alt="Readlo logo" className="h-10 w-auto" />
               <span className="text-lg font-extrabold tracking-tight text-foreground">Readlo</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
