@@ -2,7 +2,7 @@ import { Link, useRouter } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
-import bookiLogo from "@/assets/booki-logo.png.asset.json";
+
 
 export function Footer() {
   const router = useRouter();
@@ -22,7 +22,7 @@ export function Footer() {
           {/* Column 1 */}
           <div>
             <div className="flex items-center gap-2.5">
-              <img src={bookiLogo.url} alt="Readlo logo" className="h-10 w-auto" />
+              <img src="/booki.png" alt="Readlo logo" className="h-10 w-auto" />
               <span className="text-lg font-extrabold tracking-tight text-foreground">Readlo</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
