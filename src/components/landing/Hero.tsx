@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, BookHeart } from "lucide-react";
+import { ArrowRight, BookHeart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
@@ -14,12 +14,7 @@ export function Hero() {
       />
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-[3fr_2fr]">
         <div className="animate-[fade-up_0.7s_ease-out_both]">
-          <span className="inline-flex items-center gap-2 rounded-full bg-light-accent px-4 py-1.5 text-sm font-semibold text-primary">
-            <MapPin className="h-4 w-4" />
-            Launching in Jammu First
-          </span>
-
-          <h1 className="mt-6 text-[2.75rem] font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-[4rem]">
+          <h1 className="text-[2.75rem] font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-[4rem]">
             Read more.
             <br />
             <span className="text-primary">Spend less.</span>
