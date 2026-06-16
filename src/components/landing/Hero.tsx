@@ -1,4 +1,4 @@
-import { ArrowRight, BookHeart } from "lucide-react";
+import { ArrowRight, BookHeart, BookOpen } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { scrollToId } from "@/lib/scroll";
@@ -25,7 +25,7 @@ export function Hero() {
             India's first peer-to-peer book lending community.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3">
             <Button variant="hero" size="pillLg" onClick={() => scrollToId("waitlist")}>
               Join the Waitlist
               <ArrowRight className="h-4 w-4" />
@@ -33,6 +33,10 @@ export function Hero() {
             <Button variant="heroOutline" size="pillLg" onClick={() => scrollToId("waitlist")}>
               <BookHeart className="h-4 w-4" />
               I Want to Lend Books
+            </Button>
+            <Button variant="heroOutline" size="pillLg" onClick={() => scrollToId("waitlist")}>
+              <BookOpen className="h-4 w-4" />
+              I Want to Borrow Books
             </Button>
           </div>
 
