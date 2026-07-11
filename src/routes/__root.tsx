@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Readlo — India's Peer-to-Peer Book Lending Community" },
+      { title: "ReadLo — India's Peer-to-Peer Book Lending Community" },
       {
         name: "description",
         content:
-          "Borrow books from readers near you and lend the ones you've finished. Join Readlo, India's first peer-to-peer book lending community. Launching in Jammu first.",
+          "Borrow books from readers near you and lend the ones you've finished. Join ReadLo, India's first peer-to-peer book lending community. Launching in Jammu first.",
       },
-      { name: "author", content: "Readlo" },
-      { property: "og:title", content: "Readlo — Read more. Spend less." },
+      { name: "author", content: "ReadLo" },
+      { property: "og:title", content: "ReadLo — Read more. Spend less." },
       {
         property: "og:description",
         content:

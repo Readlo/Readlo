@@ -8,8 +8,8 @@ import { Reveal } from "./Reveal";
 
 const faqs = [
   {
-    q: "What is Readlo?",
-    a: "Readlo is a peer-to-peer book lending platform. Readers lend books they've finished and borrowers gain affordable access without purchasing every title.",
+    q: "What is ReadLo?",
+    a: "ReadLo is a peer-to-peer book lending platform. Readers lend books they've finished and borrowers gain affordable access without purchasing every title.",
   },
   {
     q: "When are you launching?",

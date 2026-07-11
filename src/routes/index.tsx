@@ -13,13 +13,13 @@ import { Footer } from "@/components/landing/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Readlo — Borrow & Lend Books With Readers Near You" },
+      { title: "ReadLo — Borrow & Lend Books With Readers Near You" },
       {
         name: "description",
         content:
-          "Readlo is India's first peer-to-peer book lending community. Borrow books from readers near you, lend the ones you've finished, and join the waitlist — launching in Jammu first.",
+          "ReadLo is India's first peer-to-peer book lending community. Borrow books from readers near you, lend the ones you've finished, and join the waitlist — launching in Jammu first.",
       },
-      { property: "og:title", content: "Readlo — Read more. Spend less." },
+      { property: "og:title", content: "ReadLo — Read more. Spend less." },
       {
         property: "og:description",
         content:

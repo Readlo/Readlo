@@ -118,7 +118,7 @@ export function WaitlistSection() {
                 You're on the list.
               </h2>
               <p className="mt-3 max-w-md text-base leading-relaxed text-muted-foreground">
-                Thank you for believing in Readlo. We'll reach out as soon as we launch in your city.
+                Thank you for believing in ReadLo. We'll reach out as soon as we launch in your city.
               </p>
             </div>
           ) : (
@@ -128,7 +128,7 @@ export function WaitlistSection() {
                   Get Early Access
                 </h2>
                 <p className="mx-auto mt-3 max-w-md text-base leading-relaxed text-muted-foreground">
-                  We're building Readlo for readers like you. Join the waitlist and help shape what
+                  We're building ReadLo for readers like you. Join the waitlist and help shape what
                   we build.
                 </p>
               </div>
@@ -252,7 +252,7 @@ export function WaitlistSection() {
                 )}
 
                 <p className="text-center text-xs text-muted-foreground">
-                  No spam. We'll only contact you regarding Readlo.
+                  No spam. We'll only contact you regarding ReadLo.
                 </p>
               </form>
             </>
