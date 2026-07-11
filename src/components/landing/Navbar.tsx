@@ -46,14 +46,14 @@ export function Navbar() {
         <button
           onClick={() => go("top")}
           className="flex items-center gap-2.5"
-          aria-label="Readlo home"
+          aria-label="ReadLo home"
         >
           <img
             src="/booki.png"
-            alt="Readlo logo"
+            alt="ReadLo logo"
             className="h-10 w-auto"
           />
-          <span className="text-lg font-extrabold tracking-tight text-foreground">Readlo</span>
+          <span className="text-lg font-extrabold tracking-tight text-foreground">ReadLo</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">

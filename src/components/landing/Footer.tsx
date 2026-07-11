@@ -22,8 +22,8 @@ export function Footer() {
           {/* Column 1 */}
           <div>
             <div className="flex items-center gap-2.5">
-              <img src="/booki.png" alt="Readlo logo" className="h-10 w-auto" />
-              <span className="text-lg font-extrabold tracking-tight text-foreground">Readlo</span>
+              <img src="/booki.png" alt="ReadLo logo" className="h-10 w-auto" />
+              <span className="text-lg font-extrabold tracking-tight text-foreground">ReadLo</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Building India's reader-powered book network.
@@ -41,7 +41,7 @@ export function Footer() {
           {/* Column 2 */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-              Readlo
+              ReadLo
             </h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Readlo. Made with love for readers.</p>
+          <p>© 2026 ReadLo. Made with love for readers.</p>
           <p>Built in India</p>
         </div>
       </div>
